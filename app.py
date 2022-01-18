@@ -44,7 +44,7 @@ def index():
             reviews = []  # initializing an empty list for reviews
 
 
-            while(len(reviews) <= 60) :
+            while(len(reviews) <= 30) :
                 del review_divs[0:4]
                 next_page_div = review_divs[-1]
                 del review_divs[-1]
@@ -81,7 +81,7 @@ def index():
 
                     reviews.append(mydict)
 
-                    if len(reviews) > 60 :
+                    if len(reviews) > 30 :
                         break
 
                 next_page_link = "https://www.flipkart.com" + next_page_div.findAll("a", {"class": "_1LKTO3"})[0]['href']
